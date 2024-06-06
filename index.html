@@ -1,0 +1,52 @@
+<html>
+  <head>   
+       <title>Sorting_my_name</title>
+      <style>
+         *{font-size: 40px;font-family:Arial;}
+         body{ background-color: lightblue;}
+      </style>
+  </head>
+  <body>
+  <center>
+        <h1>Sort my name app</h1>
+        <form onsubmit= "mysort()">
+        <input type = "text" placeholder="Enter your name:" id="name">
+        <br><br/>
+        <input type = "submit">
+        <br><br/>
+        <h2 id="msg"></h2>
+        </form>
+  </center>
+    <script>
+      function mysort()
+      {
+        event.preventDefault();
+        let name= document.getElementById("name");
+        let msg = document.getElementById("msg");
+
+        if (name.value.trim() == "")
+        {
+          alert ("Name cannot be empty");
+          msg.innerHTML;
+          name.focus();
+          return;
+        }
+
+        let n = name.value;
+
+        let d1 = n.split("");
+        d1.sort()
+        let p = d1.join("");
+
+        let g = n.split("").sort().join("");
+        msg.innerHTML = "sorted name:" + p + "" + g;
+      }
+  
+
+
+
+    
+    </script>
+     </center>
+  </body>
+</html>
